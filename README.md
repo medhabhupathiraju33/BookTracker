@@ -10,7 +10,7 @@
 - View Lists: Display the different lists of books directly in the terminal.
 - Saving Data: Save the reading data locally to json file each time it's updated.
 
-![System Diagram] (System Diagram.png)
+![System Diagram](System Diagram.png)
 
 ## Future Plans
 - Be able to move books between the different lists
