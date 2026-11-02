@@ -9,6 +9,7 @@
 - Add Books: Ask user for title and author of the book they want to add to a list
 - View Lists: Display the different lists of books directly in the terminal.
 - Saving Data: Save the reading data locally to json file each time it's updated.
+
 ![System Diagram](System Diagram.png)
 
 ## Future Plans
