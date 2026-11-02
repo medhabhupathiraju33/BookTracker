@@ -9,6 +9,7 @@
 - Add Books: Ask user for title and author of the book they want to add to a list
 - View Lists: Display the different lists of books directly in the terminal.
 - Saving Data: Save the reading data locally to json file each time it's updated.
+[System Diagram] (docs/System Diagram.png)
 
 ## Future Plans
 - Be able to move books between the different lists
@@ -19,3 +20,6 @@
 ## Tech Stack
 - Language: Python 3
 - Built-In Library: Json, Random, Datetime
+
+## Author
+Medha Bhupathiraju, https://github.com/medhabhupathiraju33/
