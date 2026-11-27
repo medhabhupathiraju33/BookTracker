@@ -7,6 +7,7 @@
 ## MVP Scope - Version 1.0
 - [x] Main Menu: A continuous loop that provides an easy way to navigate the options.
 - [x] Add Books: Ask user for title of the book they want to add to a list
+- [x] Remove Books: Allow user to remove a book from a list
 - [x] View Lists: Display the different lists of books directly in the terminal.
 - [x] Saving Data: Save the reading data locally to json file each time it's updated.
 
