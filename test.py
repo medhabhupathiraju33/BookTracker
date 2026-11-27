@@ -15,7 +15,7 @@ def display_books(book_data):
 
 cont = True
 while cont:
-    user_input = input('\nMain Menu:\n1. Add book to a list\n2. View book lists\n3. Exit\nEnter the number that corresponds to the option you want to choose: ')
+    user_input = input('\nMain Menu:\n1. Add a book to a list\n2. Remove a book from a list\n3. View book lists\n4. Exit\nEnter the number that corresponds to the option you want to choose: ')
     
     # compares user input to string to aviod ValueError if string is entered 
     if user_input == '1':
@@ -42,9 +42,42 @@ while cont:
         print(f"Successfully added '{book_name}.")
 
     elif user_input == '2':
-        display_books(book_lists)
+        while True:
+            which_list = input('\n1. To Be Read\n2. Currently Reading\n3. Finished\nWhich list do you want to remove a book from? Enter the number that corresponds to the option you want to choose: ')
+            if which_list in ['1','2','3']:
+                break
+            print('Please pick a number that corresponds to one of the given options: ')
+                
+        book_name = input('Enter the name of the book you want to remove: ')
+
+        if which_list == '1':
+            if book_name in book_lists['to_be_read']:
+                book_lists['to_be_read'].remove(book_name)
+                print(f"Removed '{book_name}' from To Be Read.")
+            else:
+                print(f"'{book_name}' was not found in To Be Read.")
+        elif which_list == '2':
+            if book_name in book_lists['currently_reading']:
+                book_lists['currently_reading'].remove(book_name)
+                print(f"Removed '{book_name}' from Currently Reading.")
+            else:
+                print(f"'{book_name}' was not found in Currently Reading.")
+        elif which_list == '3':
+            if book_name in book_lists['finished']:
+                book_lists['finished'].remove(book_name)
+                print(f"Removed '{book_name}' from Finished.")
+            else:
+                print(f"'{book_name}' was not found in Finished.")
+
+        book_file = open('Books.json', 'w')
+        json.dump(book_lists, book_file)
+        book_file.close()
+
 
     elif user_input == '3':
+        display_books(book_lists)
+
+    elif user_input == '4':
         cont = False
         print('Goodbye.')
 
