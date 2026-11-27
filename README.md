@@ -8,7 +8,7 @@
 - [x] Main Menu: A continuous loop that provides an easy way to navigate the options.
 - [x] Add Books: Ask user for title of the book they want to add to a list
 - [x] View Lists: Display the different lists of books directly in the terminal.
-- [ ] Saving Data: Save the reading data locally to json file each time it's updated.
+- [x] Saving Data: Save the reading data locally to json file each time it's updated.
 
 ![System Diagram](SystemDiagram.png)
 
