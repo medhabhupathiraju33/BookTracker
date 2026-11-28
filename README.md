@@ -15,7 +15,7 @@
 
 ## Future Plans
 - [ ] Be able to move books between the different lists
-- [ ] Random Book: Choose a random book to read from the list of books to be read
+- [x] Random Book: Choose a random book to read from the list of books to be read
 - [ ] Rating System: Rate finished books.
 - [ ] Progress: Tracking the progress of the book currently being read and when it's finished.
 
