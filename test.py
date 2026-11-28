@@ -1,4 +1,5 @@
 import json
+import random
 
 # loading saved reading lists from Books.json when program starts so previous reading lists are saved between terminal sessions
 book_file = open('Books.json', 'r')
@@ -15,7 +16,7 @@ def display_books(book_data):
 
 cont = True
 while cont:
-    user_input = input('\nMain Menu:\n1. Add a book to a list\n2. Remove a book from a list\n3. View book lists\n4. Exit\nEnter the number that corresponds to the option you want to choose: ')
+    user_input = input('\nMain Menu:\n1. Add a book to a list\n2. Remove a book from a list\n3. View book lists\n4. Random book selection\n5. Exit\nEnter the number that corresponds to the option you want to choose: ')
     
     # compares user input to string to aviod ValueError if string is entered 
     if user_input == '1':
@@ -78,6 +79,13 @@ while cont:
         display_books(book_lists)
 
     elif user_input == '4':
+        if len(book_lists['to_be_read']) > 0:
+            random_book = random.choice(book_lists['to_be_read'])
+            print(f"\nYou should read '{random_book}' next!")
+        else:
+            print("\nYour 'To Be Read' list is empty. Add some books first.")
+    
+    elif user_input == '5':
         cont = False
         print('Goodbye.')
 
